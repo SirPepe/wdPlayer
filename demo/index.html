@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>wdPlayer Demo</title>
+<style type="text/css">
+canvas {
+  border: 1px solid #333
+}
+</style>
+
+<div id="Container"></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="Bacon.js"></script>
+<script src="../wdPlayer.js"></script>
+<script>
+
+  wdPlayer({
+    sources: {
+      'audio/mp3': 'demo.mp3',
+      'audio/ogg': 'demo.ogg'
+    },
+    timelineStyle: {
+      height: 200,
+      width: 400,
+      color: '#850051',
+      altColor: '#CCC'
+    }
+  }).appendTo('#Container');
+
+</script>
