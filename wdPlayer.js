@@ -1,4 +1,7 @@
 (function(root, factory){
+
+  "use strict";
+
   if (typeof define === 'function' && define.amd){
     define(['jquery', 'bacon'], factory);
   }
@@ -9,13 +12,12 @@
 
   "use strict";
 
-  //
-  var defaultOptions = {
-    timelineStyles: {
-      height: 200,
-      width: 400
-    }
-  };
+  // var defaultOptions = {
+  //   timelineStyles: {
+  //     height: 200,
+  //     width: 400
+  //   }
+  // };
 
 
   // Rendering helpers
@@ -168,9 +170,9 @@
     ]);
 
     // Map timeline clicks to player jump commands
-    var timelineClicks = $timeline.asEventStream('click').map(function(evt){
-      return evt.clientX - $timeline.offset().left;
-    });
+    // var timelineClicks = $timeline.asEventStream('click').map(function(evt){
+    //   return evt.clientX - $timeline.offset().left;
+    // });
 
 
     // Timeline rendering
