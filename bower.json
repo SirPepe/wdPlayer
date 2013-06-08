@@ -4,12 +4,12 @@
 	"main": "wdPlayer.js",
 	"ignore": [
 		".jshintrc",
-		"demo"
+		"demo",
 		"LICENSE.md",
 		"README.md"
 	],
 	"dependencies": {
 		"bacon": "~0.4.x",
-		"jQuery": "~1.x.x"
+		"jquery": "~1.x.x"
 	}
 }
