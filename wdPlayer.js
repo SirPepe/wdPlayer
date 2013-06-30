@@ -92,11 +92,6 @@
     }
 
     //
-    var $time = $('<p>').attr({
-      class: 'wdplayer-time'
-    });
-
-    //
     var $timeline = $('<canvas>').attr({
       class: 'wdplayer-timeline',
       height: options.timelineStyle.height,
@@ -182,7 +177,7 @@
     var currentTime = $player.asEventStream('timeupdate').map('.target.currentTime');
 
     // Map time streams to time box content
-    currentTime.toProperty(0).assign($time, 'html');
+    currentTime.toProperty(0).assign($timeline, 'attr', 'data-time');
 
     // Combined paint events stream
     var paintEvents = Bacon.combineTemplate({
@@ -216,7 +211,6 @@
     return $wrapper.append(
       $timeline,
       $player,
-      $time,
       $playButton
     );
 
